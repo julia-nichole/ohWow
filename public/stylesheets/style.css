@@ -1,0 +1,21 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #D9BBF9;
+}
+.bg{
+  background-color: #EDEBD7;
+}
+nav{
+  display: flex;
+   margin: 0;
+   overflow: hidden;
+   display: flex;
+   justify-content:space-between;
+   padding: 20px;
+   font-size: 20px;
+   background-color: rgb(255,255,130,0.5)
+}
