@@ -1,5 +1,5 @@
 var passport = require('passport');
-var passport = require('passport');
+
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 passport.use(new GoogleStrategy({
@@ -13,14 +13,6 @@ passport.use(new GoogleStrategy({
       User.findOne({ 'googleId': profile.id }, function(err, user) {
         if (err) return cb(err);
         if (user) {
-          if (!user.avatar) {
-            user.avatar = profile.photos[0].value;
-            user.save(function(err) {
-              return cb(null, user);
-            });
-          } else {
-              return cb(null, user);
-            }
           } else {
             // we have a new user via OAuth!
             var newUser = new User({
